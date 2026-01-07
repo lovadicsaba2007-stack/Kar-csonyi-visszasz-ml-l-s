@@ -1,0 +1,53 @@
+body {
+    background: linear-gradient(135deg, #198754, #dc3545);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.countdown-box {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.time {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.label {
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+/* Fade-in animáció */
+.animate-fade {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hóesés animáció */
+.snow::before {
+    content: "❄ ❄ ❄ ❄ ❄ ❄ ❄";
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 100%;
+    font-size: 2rem;
+    animation: snow 10s linear infinite;
+    opacity: 0.6;
+}
+
+@keyframes snow {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(120vh); }
+}
